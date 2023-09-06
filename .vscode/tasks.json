@@ -1,0 +1,46 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "docker START",
+            "type": "shell",
+            "command": "./dockerstart.cmd",
+            "windows": {
+                "command": ".\\dockerstart.cmd"
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "docker STOP",
+            "type": "shell",
+            "command": "./dockerstop.cmd",
+            "windows": {
+                "command": ".\\dockerstop.cmd"
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "REBUILD jtacalendar",
+            "type": "shell",
+            "command": "./rebuild.cmd",
+            "windows": {
+                "command": ".\\rebuild.cmd"
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": []
+        }
+    ]
+}

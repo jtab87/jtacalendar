@@ -1,0 +1,39 @@
+// clic sur un event
+eventClick: (event)=>{
+  calendarEvent({
+ value: event.event
+  })
+}
+
+// clic sur une date
+dateClick: function(info) {
+    alert(info.date);
+    alert('Clicked on: ' + info.dateStr);
+    alert('Current view: ' + info.view.type);
+} 
+
+// Au changement de prev/next, de view
+// https://fullcalendar.io/docs/datesSet
+datesSet:function(info) {
+ alert(info.start);
+ alert(info.end);
+ alert(info.startStr);
+ alert(info.endStr);
+}
+
+// https://fullcalendar.io/docs/eventDrop
+eventDrop: function(info) {
+}
+
+// https://fullcalendar.io/docs/eventResize
+eventResize: function(info) {
+}
+
+height:100vh
+
+calendar.addEvent({
+              title: 'dynamic event',
+              start: date,
+              allDay: true
+            });
+            

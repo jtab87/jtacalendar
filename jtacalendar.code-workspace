@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../.old/budibase-fullcalendar-main"
+		},
+		{
+			"path": "../../../fullcalendar/fullcalendar-examples/webpack-scheduler"
+		}
+	],
+	"settings": {}
+}

@@ -1,0 +1,237 @@
+{
+  "type": "component",
+  "metadata": {},
+  "schema": {
+    "name": "jtacalendar",
+    "friendlyName": "jtacalendar",
+    "description": "super calendar jta",
+    "icon": "Calendar",
+    "styles": [
+      "padding",
+      "background",
+      "size"
+    ],
+    "hasChildren": true,
+    "settings": [
+      {
+        "section": true,
+        "name": "Les options générales",
+        "settings": [
+          {
+            "type": "text",
+            "label": "La license",
+            "key": "licence",
+            "defaultValue": "CC-Attribution-NonCommercial-NoDerivatives"
+          },
+          {
+            "type": "text",
+            "label": "Style calendrier",
+            "key": "styleCal",
+            "defaultValue": "background-color:white;color:black;"
+          },
+          {
+            "type": "text",
+            "label": "Min Time",
+            "key": "slotMinTime",
+            "defaultValue": "06:00:00"
+          },
+          {
+            "type": "text",
+            "label": "Max Time",
+            "key": "slotMaxTime",
+            "defaultValue": "20:00:00"
+          },
+          {
+            "type": "boolean",
+            "label": "Editable",
+            "key": "editable",
+            "defaultValue": true
+          },
+          {
+            "type": "boolean",
+            "label": "Avec timeline",
+            "key": "timeLine",
+            "defaultValue": false
+          }
+        ]
+      },
+      {
+        "section": true,
+        "name": "La source du calendrier",
+        "settings": [
+          {
+            "type": "dataProvider",
+            "label": "DataProvider",
+            "key": "dataProvider",
+            "required": true
+          },
+          {
+            "type": "field",
+            "label": "ID",
+            "key": "champId",
+            "dependsOn": "dataProvider",
+            "required": true
+          },
+          {
+            "type": "field",
+            "label": "Titre",
+            "key": "champTitre",
+            "dependsOn": "dataProvider",
+            "required": true
+          },
+          {
+            "type": "field",
+            "label": "Date début",
+            "key": "champDebut",
+            "dependsOn": "dataProvider",
+            "required": true
+          },
+          {
+            "type": "field",
+            "label": "Date fin",
+            "key": "champFin",
+            "dependsOn": "dataProvider",
+            "required": true
+          },
+          {
+            "type": "field",
+            "label": "Commentaire",
+            "key": "champTip",
+            "dependsOn": "dataProvider",
+            "required": false
+          }
+        ]
+      },
+      {
+        "section": true,
+        "name": "La source du timeline",
+        "dependsOn": "timeLine",
+        "settings": [
+          {
+            "type": "dataProvider",
+            "label": "DataProvider",
+            "key": "dataProvider1",
+            "required": false
+          },
+          {
+            "type": "text",
+            "label": "ID",
+            "key": "champId1",
+            "defaultValue": "autoId"
+          },
+          {
+            "type": "text",
+            "label": "Titre",
+            "key": "champTitre1",
+            "defaultValue": "titre"
+          },
+          {
+            "type": "text",
+            "label": "groupId",
+            "key": "champGroupId1",
+            "defaultValue": "groupId"
+          },
+          {
+            "type": "text",
+            "label": "eventColor",
+            "key": "champEventColor1",
+            "defaultValue": "eventColor"
+          }
+        ]
+      },
+      {
+        "section": true,
+        "name": "La config du timeline",
+        "dependsOn": "timeLine",
+        "settings": [
+          {
+            "type": "text",
+            "label": "Titre colonne",
+            "key": "titreGroupes1",
+            "defaultValue": "Les salles"
+          },
+          {
+            "type": "text",
+            "label": "Largeur colonne",
+            "key": "larCol1",
+            "defaultValue": "20%"
+          },
+          {
+            "type": "number",
+            "label": "Nombre de jours",
+            "key": "nbjrs1",
+            "defaultValue": 3
+          }
+        ]
+      },
+      {
+        "section": true,
+        "name": "Les actions",
+        "dependsOn": "editable",
+        "settings": [
+          {
+            "type": "event",
+            "label": "Click sur event",
+            "key": "clickEvent",
+            "context": [
+              {
+                "label": "Event",
+                "key": "value"
+              }
+            ]
+          },
+          {
+            "type": "event",
+            "label": "Click sur jour",
+            "key": "clickDate",
+            "context": [
+              {
+                "label": "Date",
+                "key": "value"
+              },
+              {
+                "label": "View",
+                "key": "view"
+              },
+              {
+                "label": "Ressource",
+                "key": "resource"
+              }
+            ]
+          },
+          {
+            "type": "event",
+            "label": "Event change",
+            "key": "eventChange",
+            "context": [
+              {
+                "label": "Event",
+                "key": "event"
+              },
+              {
+                "label": "Old Event",
+                "key": "oldEvent"
+              },
+              {
+                "label": "Ressource Id",
+                "key": "resourceId"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "context": [
+      {
+        "type": "static",
+        "values": [
+          {
+            "label": "calendrier",
+            "key": "jtacal",
+            "type": "object"
+          }
+        ]
+      }
+    ]
+  }
+}
