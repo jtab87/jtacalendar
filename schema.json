@@ -155,12 +155,6 @@
             "label": "Largeur colonne",
             "key": "larCol1",
             "defaultValue": "20%"
-          },
-          {
-            "type": "number",
-            "label": "Nombre de jours",
-            "key": "nbjrs1",
-            "defaultValue": 3
           }
         ]
       },
