@@ -21,15 +21,15 @@ Ce plugin budibase implémente le composant [FullCalendar](https://fullcalendar.
 
 3. Ajouter un formulaire au composant jtaCalendar. Cette forme portera les champs permettant de créer/modifier un évènement
 
-4. Lier les données des évènements au dataprovider.  **Astuce** : utiliser l'ID interne (_id) de la table comme id des évènements.
+</td></tr></table>
+
+Il faut ensuite lier les données des évènements au dataprovider.  **Astuce** : utiliser l'ID interne (_id) de la table comme id des évènements.
 <p><img src="src/images/2.png" /></p>
 
 Les champs suivants sont à ajouter à la table des évènements : 
 - **resourceId** (string) : permet d'enregistrer l'id de la ressource associée à l'évènement (mode "timeLine")
 - **allDay** (boolean) : true pour rendre l'évènement "allDay", false sinon (défaut)
-- **color** (string) : permet d'enregistrer une couleur à associer à l'évènement. Si vide : l'évènement prendra la couleur de la ressource associée (mode "timeLine")
-
-</td></tr></table>
+- **color** (string) : permet d'enregistrer une couleur à associer à l'évènement. Si vide : l'évènement prendra la couleur par défaut (mode "classique") ou la couleur de la ressource associée (mode "timeLine")
 
 ### Mode "classique"
 <p><img src="src/images/classique.png" /></p>
